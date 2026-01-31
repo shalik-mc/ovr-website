@@ -196,6 +196,16 @@ body{
     gap:15px;
     padding: 20px;
   }
+  nav{
+    padding: 12px 0;
+  }
+  nav ul{
+    flex-direction: column;
+    gap: 14px;
+  }
+  nav a{
+    font-size: 16px;
+  }
   .nav-links{
     flex-direction: column;
     gap: 12px;
@@ -222,6 +232,23 @@ body{
   .left-section,
   .right-section{
     width: 100%;
+  }
+  .container{
+    text-align: center;
+    padding: 40px 20px;
+  }
+  .brand{
+    font-size: 32px;
+    line-height: 1.2;
+  }
+  .under-logo{
+    font-size: 18px;
+    line-height: 1.3;
+    margin-top: 10px;
+  }
+  .cta{
+    padding: 12px 24px;
+    font-size: 16px;
   }
 }
 .footer {
