@@ -368,3 +368,8 @@ body{
   }
 
 }
+@media (max-width: 768px) {
+  .container {
+    border: 3px solid red;
+  }
+}
