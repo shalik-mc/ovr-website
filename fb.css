@@ -343,33 +343,29 @@ body{
 .social-icons i:hover {
   color: #ff6b6b;
 }
-/* MOBILE FIX */
 @media (max-width: 768px) {
 
   .container {
-    padding: 40px 20px;
+    flex-direction: column;
     text-align: center;
+    padding: 20px;
   }
 
-  .container h1,
-  .container h2 {
+  .left-section,
+  .right-section {
+    width: 100%;
+  }
+
+  .brand {
     font-size: 32px;
     line-height: 1.2;
-    margin-bottom: 12px;
   }
 
-  .container p {
+  .under-logo {
     font-size: 16px;
-    line-height: 1.5;
+    margin-top: 10px;
   }
-
-  .shop-btn {
-    margin-top: 20px;
-  }
-
-}
-@media (max-width: 768px) {
-  .container {
+  .container{
     border: 3px solid red;
   }
 }
