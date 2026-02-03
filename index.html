@@ -8,14 +8,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-  <script>
-  const menu = document.querySelector(".menu-toggle");
-  const links = document.querySelector(".nav-links");
-
-  menu.addEventListener("click", () => {
-    links.classList.toggle("active");
-  });
-</script>
   <nav class="navbar">
     <div class="nav-logo">OVR</div>
     <div class="menu-toggle">
@@ -105,6 +97,17 @@
   <a href="#"><i class="fab fa-instagram"></i></a>
   <a href="#"><i class="fab fa-twitter"></i></a>
 </div>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const menu = document.querySelector(".menu-toggle");
+  const links = document.querySelector(".nav-links");
 
+  if (menu && links) {
+    menu.addEventListener("click", () => {
+      links.classList.toggle("active");
+    });
+  }
+});
+</script>
 </body>
 </html>
