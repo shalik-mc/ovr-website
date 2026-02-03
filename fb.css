@@ -108,10 +108,20 @@ body{
   justify-content: space-between;
   padding: 15px 20px;
   background-color: #111;
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  
 
+}
+.navbar{
+  transition: padding 0.3s ease,
+  box-shadow 0.3s ease;
+}
+.scrolled{
+  padding: 8px 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03) ;
 }
 .nav-logo{
   font-size: 20px;
@@ -331,6 +341,78 @@ body{
   color: #888;
 }
 
+.navbar {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  padding: 12px 20px;
+  background: #111;
+  position: sticky;    /* STICKY */
+  top: 0;              /* Stick to top */
+  z-index: 1000;       /* Above other content */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: padding 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nav-logo {
+  justify-self: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+
+.menu-toggle {
+  justify-self: start;
+  font-size: 26px;
+  color: white;
+  cursor: pointer;
+}
+
+.nav-btn {
+  justify-self: end;
+  font-size: 14px;
+  padding: 6px 12px;
+  background: #ff5722;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.nav-links {
+  grid-column: 1 / -1;  /* full width below navbar */
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  background: #111;
+}
+
+.nav-links li {
+  list-style: none;
+  padding: 12px 0;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+/* ================= SCROLL EFFECT ================= */
+.navbar.scrolled {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  padding: 8px 20px;
+}
+
+/* ================= MOBILE MEDIA QUERY ================= */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+}
 /* Responsive */
 @media (max-width: 768px) {
   .footer-container {
