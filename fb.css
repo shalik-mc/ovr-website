@@ -343,3 +343,28 @@ body{
 .social-icons i:hover {
   color: #ff6b6b;
 }
+/* MOBILE FIX */
+@media (max-width: 768px) {
+
+  .container {
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .container h1,
+  .container h2 {
+    font-size: 32px;
+    line-height: 1.2;
+    margin-bottom: 12px;
+  }
+
+  .container p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .shop-btn {
+    margin-top: 20px;
+  }
+
+}
