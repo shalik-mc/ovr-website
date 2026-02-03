@@ -343,25 +343,28 @@ body{
 .social-icons i:hover {
   color: #ff6b6b;
 }
-
-
-
 @media (max-width: 768px) {
+
   .container {
+    display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    text-align: center;
-    gap: 20px;
-    padding: 40px 20px;
+    padding: 32px 16px;
   }
 
   .left-section,
   .right-section {
     width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
     text-align: center;
+    position: static; /* THIS IS KEY */
   }
 
-  .right-section {
-    align-items: center;
+  .left-section h2,
+  .right-section p {
+    text-align: center;
   }
 }
